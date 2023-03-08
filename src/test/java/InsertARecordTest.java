@@ -34,6 +34,7 @@ public class InsertARecordTest {
     public void afterEach(){
         try {
             Connection connection = ConnectionUtil.getConnection();
+            
             String sql = "DROP TABLE song;";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
